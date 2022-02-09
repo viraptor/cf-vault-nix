@@ -26,5 +26,7 @@
 
       vendorSha256 = null;
     });
+
+    defaultApp = forAllSystems (system: defaultPackage.${system});
   };
 }
