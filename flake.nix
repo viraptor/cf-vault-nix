@@ -34,6 +34,6 @@
       };
     });
 
-    defaultApp = forAllSystems (system: defaultPackage.${system});
+    defaultApp = forAllSystems (system: apps.${system}.cf-vault);
   };
 }
