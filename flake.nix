@@ -27,6 +27,13 @@
       vendorSha256 = null;
     });
 
+    apps = forAllSystems (system: {
+      cf-vault = {
+        type = "app";
+        program = "${defaultPackage.${system}}/bin/cf-vault";
+      };
+    });
+
     defaultApp = forAllSystems (system: defaultPackage.${system});
   };
 }
